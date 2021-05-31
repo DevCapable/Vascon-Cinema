@@ -105,7 +105,7 @@
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard </li>
-             
+
               <form method="POST" action="{{ url('admin/logout') }}" novalidate>
                 @csrf
                 <button style=" float: right;" type="submit" class="btn btn-sm btn-primary"><span class="iconify"
@@ -158,13 +158,12 @@
                 </div>
               </div>
               <div class="row">
-                {{ $adminName->username }}
                 <div class="col-sm-6">
                   <section class="blog-page">
                     <div class="container">
                       <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                          <div class="blog-item"> <img src="{{ asset('img/ASU_LOGO.png') }}" height="200" width="230"
+                          <div class="blog-item"> <img src="{{ asset('img/Vas_new.png') }}" height="200" width="230"
                               class="img-responsive" alt="Admin logo" class="img-rounded">
                             <div class="date"></div>
                             <div class="down-content">
@@ -348,9 +347,7 @@
   <!-- ============================================================== -->
   <!-- End Container fluid  -->
   <!-- ============================================================== -->
-  </div>
-  </div>
-  </div>
+ 
   <script>
     function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
@@ -371,7 +368,6 @@
   @extends('user::layouts.footer')
   @extends('user::layouts.scripts')
 </body>
-</html>
 <script>
   const Toast = Swal.mixin({
     toast: true,
@@ -389,3 +385,5 @@
     title: 'Administrator! Welcome Back home'
   })
 </script>
+
+</html>
