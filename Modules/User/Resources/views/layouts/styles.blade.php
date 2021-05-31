@@ -23,9 +23,6 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <!-- summernote -->
 <link rel="stylesheet" href="{{ asset('/plugins/summernote/summernote-bs4.min.css')}}">
 
- Module::asset('user:
-
-
 
 <style>
     #tagging {
