@@ -1,0 +1,12 @@
+  <!-- Vendor Scripts -->
+  <script src="{{ asset('js/vendor.min.js') }}"></script>
+  <!-- Plugin's Scripts -->
+  <script src="{{ asset('plugins/fancybox/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ asset('plugins/nice-select/jquery.nice-select.min.js') }}"></script>
+  <script src="{{ asset('plugins/aos/aos.min.js') }}"></script>
+  <script src="{{ asset('plugins/slick/slick.min.js') }}"></script>
+  <script src="{{ asset('/plugins/counter-up/jquery.waypoints.js') }}"></script>
+  <script src="{{ asset('/plugins/counter-up/jquery.counterup.js') }}"></script>
+  <script src="{{ asset('plugins/theme-mode-switcher/gr-theme-mode-switcher.js') }}"></script>
+  <!-- Activation Script -->
+  <script src="{{ asset('js/custom.js') }}"></script>

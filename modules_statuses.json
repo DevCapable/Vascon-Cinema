@@ -1,0 +1,6 @@
+{
+    "Cinema": true,
+    "User": true,
+    "Movie": true,
+    "Client": true
+}
