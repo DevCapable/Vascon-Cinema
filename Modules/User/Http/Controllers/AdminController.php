@@ -31,7 +31,7 @@ class AdminController extends Controller
      * AUTHENTICATE USER BEFORE GETTING ACCESS.
      * @param Request $request
      * @param int $id
-     * 
+     *
      * @return Renderable
      */
     public function adminHome(Request $request)
@@ -71,7 +71,7 @@ class AdminController extends Controller
                     return redirect()->back()->withInput()->with($error);
                 }
             } catch (\Exception $ex) {
-                dd($ex);
+               throw $ex;
                 return redirect()->back('/');
             }
         }
@@ -127,7 +127,7 @@ class AdminController extends Controller
                     'date' => 'required',
                     'caption' => 'required|max:1000|min:15',
                     'details' => 'required|max:1000|min:15',
-                    'movie' => 'required|file|video|mimes:mp4|max:5048',
+                    'movie' => 'required|file|video|mimes:mp4|max:10048',
                 ];
                 $Validator = Validator::make($request->all(), $rules);
                 //DD($Validator);
@@ -138,7 +138,7 @@ class AdminController extends Controller
                     $date = $request->date;
                     $movie = $request->movie;
                     // $movie= $request('Movie');
-                    if ($movie == "") {
+                    if ($movie === "") {
                         echo 'You can not Publish Null object';
                     } else {
                         $movie = time() . '_' . $request->movie->getClientOriginalName();
@@ -149,6 +149,7 @@ class AdminController extends Controller
                             'admin' => $adminName->username,
                             'caption' => $caption,
                             'details' => $details,
+                            'status' => 'unpublished',
                             'time' => $time,
                             'date' => $date,
                             'movie' => 'Cinema/ajahCinema/' . $movie,
@@ -186,7 +187,7 @@ class AdminController extends Controller
             return redirect()->back()->with($notification);
         }
     }
-    
+
     /**
      * MANAGE MOVIE ON IKEJA CINEMA.
      * @param Request $request
@@ -262,6 +263,7 @@ class AdminController extends Controller
                             'caption' => $caption,
                             'details' => $details,
                             'time' => $time,
+                            'status' => 'unpublished',
                             'date' => $date,
                             'movie' => 'Cinema/ikejaCinema/' . $moviename,
                         ]);
@@ -274,7 +276,7 @@ class AdminController extends Controller
                             return redirect()->back()->with($notification);
                         } else {
                             $error = Session::flash('error', 'Can not create this record at this time, please try again.');
-                            return back()->with($error); 
+                            return back()->with($error);
                             $notification = array(
                                 'message' => 'can not create this Movie',
                                 'alert-type' => 'error'
@@ -362,11 +364,12 @@ class AdminController extends Controller
                         // dd($movie);
                         $request->movie->move(public_path('Cinema/lekkiCinema'), $movie);
                        // $request->movie->move(Module::getModulePath('user/public/ajaCinema'), $movie);
-                        //DD($movie) 
+                        //DD($movie)
                         $createlekkiCinema = Lekki::create([
                             'admin' => $adminName->username,
                             'caption' => $caption,
                             'details' => $details,
+                            'status' => 'unpublished',
                             'time' => $time,
                             'date' => $date,
                             'movie' => 'Cinema/lekkiCinema/' . $movie
@@ -445,13 +448,13 @@ class AdminController extends Controller
                     ]);
                     if ($publishOrUnpublish) {
                         $notification = array(
-                            'message' => 'Content Unublished Successfully',
+                            'message' => 'Content Unpublished Successfully',
                             'alert-type' => 'success'
                         );
                         return redirect()->back()->with($notification);
                     } else {
                         $notification = array(
-                            'message' => 'Error while trying to Unublished this content',
+                            'message' => 'Error while trying to Unpublished this content',
                             'alert-type' => 'success'
                         );
                         return redirect()->back()->with($notification);

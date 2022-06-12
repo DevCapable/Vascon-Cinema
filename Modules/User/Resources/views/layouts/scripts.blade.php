@@ -61,7 +61,7 @@
 
 @if (Session::has('message'))
     <script>
-        var type = "{{ Session::get('alert-type', 'info') }}";
+        var type = "{{ Session::get('alert-type') }}";
         switch (type) {
             case 'info':
                 toastr.info("{{ Session::get('message') }}");
@@ -81,5 +81,5 @@
         }
 
     </script>
-   
-@endif   
+
+@endif
