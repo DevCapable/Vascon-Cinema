@@ -43,7 +43,7 @@ class ClientController extends Controller
     {
         try {
             $ajahCinema = Ajah::where('status', 'published')->orderBy('created_at', 'asc')->simplePaginate(2);
-            return view::make('client::ajahcinema')->with([
+            return view::make('client::ajahCinema')->with([
                 'ajahCinema' => $ajahCinema
             ]);
         } catch (\Exception $ex) {
@@ -133,9 +133,9 @@ class ClientController extends Controller
     public function contactUs(Request $request)
     {
         try {
-           
+
                 return view::make('client::contactUs');
-            
+
         } catch (\Exception $ex) {
         }
     }
@@ -143,9 +143,9 @@ class ClientController extends Controller
     public function aboutUs(Request $request)
     {
         try {
-           
+
                 return view::make('client::aboutUs');
-            
+
         } catch (\Exception $ex) {
         }
     }
