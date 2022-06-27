@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
   <!-- Custom stylesheet -->
   <!-- Bootstrap core CSS -->
-  
+
 </head>
 <body style="background-color: #ffff; padding: 20px;">
   <div class="site-wrapper overflow-hidden">
@@ -76,7 +76,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ asset('aboutUs') }}">ABOUT VAS SOLUTIONS</a>
+                  <a class="nav-link" href="{{ route('aboutUs') }}">ABOUT VAS SOLUTIONS</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('contactUs') }}" role="button"
@@ -113,7 +113,7 @@
     </header>
     <!-- navbar- -->
     <!-- Header start end -->
-  
+
 </body>
 
 </html>

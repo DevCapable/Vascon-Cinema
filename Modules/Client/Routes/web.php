@@ -1,45 +1,42 @@
-<?php
+    <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+    /*
+    |--------------------------------------------------------------------------
+    | Web Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register web routes for your application. These
+    | routes are loaded by the RouteServiceProvider within a group which
+    | contains the "web" middleware group. Now create something great!
+    |
+    */
 
-use Nwidart\Modules\Facades\Module;
-use Illuminate\Support\Facades\Route;
+    use Nwidart\Modules\Facades\Module;
+    use Illuminate\Support\Facades\Route;
+    use Modules\Client\Http\Controllers\ClientController as clintController;
 
-Route::prefix('client')->group(function () {
-    Route::get('/', 'ClientController@index');
-});
+    Route::prefix('client')->group(function () {
+            Route::get('/', 'ClientController@index');
+            Route::get('lekkiCinema', [clintController::class, 'lekkiCinema'])->name('lekkiCinema');
 
+        // get ikeja publication page
+            Route::get('ikejaCinema', [clintController::class, 'ikejaCinema'])->name('ikejaCinema');
 
-//Route::view('/', 'index');
-// Route::get('/',[Modules\Client\Http\Controllers\ClientController::class,'index']);
-// get lekki publication page
-Route::get('lekkiCinema', [Modules\Client\Http\Controllers\ClientController::class, 'lekkiCinema'])->name('lekkiCinema');
+        // get Ajah publication page
+            Route::get('ajahCinema', [clintController::class, 'ajahCinema'])->name('ajahCinema');
 
-// get ikeja publication page
-Route::get('ikejaCinema', [Modules\Client\Http\Controllers\ClientController::class, 'ikejaCinema'])->name('ikejaCinema');
+        // get contact us page
+            Route::get('contactUs', [clintController::class, 'contactUs'])->name('contactUs');
 
-// get Ajah publication page
-Route::get('ajahCinema', [Modules\Client\Http\Controllers\ClientController::class, 'ajahCinema'])->name('ajahCinema');
+        // get about us page
+            Route::get('aboutUs', [clintController::class, 'aboutUs'])->name('aboutUs');
 
-// get contact us page
-Route::get('contactUs', [Modules\Client\Http\Controllers\ClientController::class, 'contactUs'])->name('contactUs');
+        // read ajah Cinema
+            Route::get('read-ajahCinema/{id}', [clintController::class, 'readAjahCinema'])->name('read-ajahCinema');
+        // read ikeja Cinema
+            Route::get('read-ikejaCinema/{id}', [clintController::class, 'readIkejaCinema'])->name('read-ikejaCinema');
 
-// get about us page
-Route::get('aboutUs', [Modules\Client\Http\Controllers\ClientController::class, 'aboutUs'])->name('aboutUs');
+        // read lekki Cinema
+            Route::get('read-lekkiCinema/{id}', [clintController::class, 'readLekkiCinema'])->name('read-lekkiCinema');
 
-// read ajah Cinema
-Route::get('read-ajahCinema/{id}', [Modules\Client\Http\Controllers\ClientController::class, 'readAjahCinema'])->name('read-ajahCinema');
-// read ikeja Cinema
-Route::get('read-ikejaCinema/{id}', [Modules\Client\Http\Controllers\ClientController::class, 'readIkejaCinema'])->name('read-ikejaCinema');
-
-// read lekki Cinema
-Route::get('read-lekkiCinema/{id}', [Modules\Client\Http\Controllers\ClientController::class, 'readLekkiCinema'])->name('read-lekkiCinema');
+    });

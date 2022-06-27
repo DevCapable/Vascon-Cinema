@@ -62,7 +62,5 @@
         </div>
         <div class="bg-shape-3"></div>
     </div>
-
-
        @stop
 
