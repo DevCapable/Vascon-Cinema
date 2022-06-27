@@ -1,98 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('user::layouts.master')
+@section('content')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Admin | Dashboard</title>
-  <style>
-    .help-block {
-      color: #dc3545;
-    }
-
-    .has-error {
-      color: #dc3545;
-    }
-
-
-
-    body {
-      font-family: Arial;
-    }
-
-    /* Style the tab */
-    .tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-
-    /* Style the buttons inside the tab */
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-size: 17px;
-    }
-
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-      background-color: #ddd;
-    }
-
-    /* Create an active/current tablink class */
-    .tab button.active {
-      background-color: #ccc;
-    }
-
-    /* Style the tab content */
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-
-    #postbutton {
-      background-color: green;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      font-size: 14;
-      font-weight: bold;
-    }
-
-    #postbutton:hover {
-      background-color: #00ffff;
-      color: red;
-      font-size: 14;
-      font-weight: bold;
-    }
-
-
-    .card:hover {
-      box-shadow: 0px 2px 7px 2px gray;
-    }
-  </style>
-</head>
-@extends('user::layouts.styles')
-
-<body style="padding-top: 1px">
-  @extends('user::layouts.sidebar')
-
-  <!---NAVBAR HERE-->
-  @extends('user::layouts.navbar')
-  <!-- NAVBAR ENDS HERE--->
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -163,7 +71,7 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                          <div class="blog-item"> <img src="{{ asset('img/Vas_new.png') }}" height="200" width="230"
+                          <div class="blog-item"> <img src="{{ asset('img/vas_new.png') }}" height="200" width="230"
                               class="img-responsive" alt="Admin logo" class="img-rounded">
                             <div class="date"></div>
                             <div class="down-content">
@@ -180,7 +88,7 @@
                     <button class="tablinks" onclick="openCity(event, 'comment')"><i id="post"
                         class="fa fa-comments"></i></button>
                     <button class="tablinks" onclick="openCity(event, 'picture')"><i id="post"
-                        class="fa fa-Movie"></i></button>
+                        class="fa fa-image"></i></button>
                     <button class="tablinks" onclick="openCity(event, 'video')"><i id="post"
                         class="fa fa-video"></i></button>
                     <div style="font-size: 12px;"><br><i class="fa fa-arrow-left"></i> What's on your
@@ -333,21 +241,22 @@
           <section class="col-lg-12 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
 
-            <!--     
-  
+            <!--
+
     </section>
     <!-- /.content -->
+          </section>
         </div>
         <!-- /.content-wrapper -->
 
         <!-- ============================================================== -->
       </div>
-
+    </section>
   </div>
   <!-- ============================================================== -->
   <!-- End Container fluid  -->
   <!-- ============================================================== -->
- 
+
   <script>
     function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
@@ -365,9 +274,10 @@
 
 
   </script>
-  @extends('user::layouts.footer')
-  @extends('user::layouts.scripts')
-</body>
+{{--  @extends('user::layouts.footer')--}}
+{{--  @extends('user::layouts.scripts')--}}
+{{--</body>--}}
+@stop
 <script>
   const Toast = Swal.mixin({
     toast: true,
@@ -386,4 +296,3 @@
   })
 </script>
 
-</html>

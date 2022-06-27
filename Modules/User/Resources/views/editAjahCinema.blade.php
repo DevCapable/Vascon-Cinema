@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('user::layouts.master')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Admin | Dashboard</title>
-  @extends('user::layouts.styles')
   <style>
-    .help-block {
-      color: #dc3545;
-    }
-
-    .has-error {
-      color: #dc3545;
-    }
 
     summary {
       background-color: greenyellow;
@@ -26,17 +12,7 @@
       background-color: green;
     }
   </style>
-</head>
-
-<body style="padding-top: 1px">
-  <!-- sidebar -->
-  @extends('user::layouts.sidebar')
-  <!-- Navbar -->
-  <!---NAVBAR HERE-->
-  @extends('user::layouts.navbar')
-  <!-- NAVBAR ENDS HERE--->
-  <!-- /.navbar -->
-
+@section('content')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -103,9 +79,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <i style="display: none"> <input type="text" value="{{ $ajahBranch->id }}" name="id"> </i>
-                     
+
                       <input type="file" name="movie" class="form-control">
-                     
+
                     </div>
                     <div class="col-md-6">
                       <button type="submit" class="btn btn-success">Change Movie</button>
@@ -119,7 +95,7 @@
                     <div class="col-md-12">
                       <div class="form-group {{ $errors->has('caption') ? 'has-error' : '' }}">
                         <label for="caption">CAPTION</label>
-                        <input type="text" name="caption" id="caption" class="form-control" value="{!! 
+                        <input type="text" name="caption" id="caption" class="form-control" value="{!!
                           $ajahBranch->caption!!}"
                           placeholder="Enter Caption">
                         @if ($errors->has('caption'))
@@ -132,7 +108,7 @@
                       <input type="time" name="time" class="form-control" value="{!!
                         $ajahBranch->time!!}">
                     </div>
-                    
+
                     <div class="col-md-6">
                       <label for="date">SHOW DATE</label>
                       <input type="date" name="date" class="form-control" value="{!!
@@ -165,12 +141,13 @@
               </div>
             </div>
             <!-- /.container-fluid -->
+          </div>
+        </div>
+      </div>
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  @extends('user::layouts.footer')
-  @extends('user::layouts.scripts')
+@stop
   <script>
     const Toast = Swal.mixin({
       toast: true,
@@ -193,6 +170,3 @@
       $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
-</body>
-
-</html>

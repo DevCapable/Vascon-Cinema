@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>VAS Solutions.com</title>
-</head>
-
-<body data-theme="light">
-    @extends('client::layouts.app')
-    @extends('client::layouts.styles')
-    <!-- hero area -->
-
-    <!-- testimonial section start -->
+    @extends('client::layouts.master')
+    @section('content')
     <div class="position-relative bg-default-3 overflow-hidden z-index-1 pt-lg-24 pt-md-23 pt-13">
         <div class="container">
             <div class="row justify-content-center">
@@ -38,7 +28,7 @@
                                           </video>
                                         </div>
                                         <div class="testimonial-card bg-white rounded-5 py-9 pl-9 pr-7 mb-lg-0 mb-9">
-                                           
+
                                             <div class="media ml-1 align-items-center">
                                                 <div class="customer-img mr-4">
                                                     <img src="img/Vas_new.png" alt=""
@@ -71,8 +61,6 @@
         <div class="bg-shape-3"></div>
     </div>
 
-   @extends('client::layouts.footer')
-    @extends('client::layouts.script')
-</body>
 
-</html>
+       @stop
+

@@ -3,131 +3,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminPanel | Log in</title>
 
-{{--    <!-- Google Font: Source Sans Pro -->--}}
-{{--    <link rel="stylesheet"--}}
-{{--    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">--}}
-{{--    <!-- Font Awesome -->--}}
-{{--    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">--}}
-{{--    <!-- icheck bootstrap -->--}}
-{{--    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">--}}
-{{--    <!-- Theme style -->--}}
-{{--    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">--}}
-{{--    --}}
-{{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"--}}
-{{--    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">--}}
-{{--    --}}
-{{--    <style>--}}
-{{--      .help-block {--}}
-{{--        color: #dc3545;--}}
-{{--      }--}}
-{{--  --}}
-{{--      .has-error {--}}
-{{--        color: #dc3545;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #tagging {--}}
-{{--        font-family: Exotc350 Bd BT;--}}
-{{--        font-size: 30px;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #homename {--}}
-{{--        font-family: Exotc350 Bd BT;--}}
-{{--        font-size: 20px;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #twitter,--}}
-{{--      #facebook,--}}
-{{--      #linkedin,--}}
-{{--      #google {--}}
-{{--        background-color: #205d7a;--}}
-{{--        color: #fff;--}}
-{{--        width: 40px;--}}
-{{--        height: 40px;--}}
-{{--        top: 52px;--}}
-{{--        border-radius: 40px;--}}
-{{--        font-size: 25px;--}}
-{{--        text-align: center;--}}
-{{--        margin-right: 0px;--}}
-{{--        padding-top: 02%;--}}
-{{--        transition: all 0.2s eas-in-out;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #facebook:hover,--}}
-{{--      #twitter:hover,--}}
-{{--      #linkedin:hover,--}}
-{{--      #google:hover {--}}
-{{--        opacity: .7;--}}
-{{--  --}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--      #twitter {--}}
-{{--        background-color: #00aced;--}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--      #google {--}}
-{{--        background-color: #dd4b39;--}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--      #facebook {--}}
-{{--        background-color: #3b5998;--}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--      #linkedin {--}}
-{{--        background-color: #007bb6;--}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--      #dropdown {--}}
-{{--        background-color: #1f2e2e;--}}
-{{--        color: #fff;--}}
-{{--        border-bottom: 1px dotted #fff;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #dropdown:hover {--}}
-{{--        color: #1affd1;--}}
-{{--      }--}}
-{{--  --}}
-{{--      ul {--}}
-{{--        display: inline-flex;--}}
-{{--        list-style: none;--}}
-{{--        color: #fff;--}}
-{{--        margin: 0px;--}}
-{{--  --}}
-{{--      }--}}
-{{--  --}}
-{{--  --}}
-{{--      #twitterb,--}}
-{{--      #facebookb,--}}
-{{--      #linkedinb,--}}
-{{--      #googleb {--}}
-{{--        background-color: #205d7a;--}}
-{{--        color: #fff;--}}
-{{--        width: 40px;--}}
-{{--        height: 40px;--}}
-{{--        top: 50px;--}}
-{{--        border-radius: 40px;--}}
-{{--        font-size: 25px;--}}
-{{--        text-align: center;--}}
-{{--        margin-right: 0px;--}}
-{{--        padding-top: 15%;--}}
-{{--        transition: all 0.2s eas-in-out;--}}
-{{--      }--}}
-{{--  --}}
-{{--      #googleb:hover,--}}
-{{--      #twitterb:hover,--}}
-{{--      #linkedinb:hover,--}}
-{{--      #facebookb:hover {--}}
-{{--        color: red;--}}
-{{--        background-color: #33ff77;--}}
-{{--      }--}}
-{{--    </style>--}}
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
-  @extends('user::layouts.master')
-  @section('content')
 
     <body class="hold-transition login-page" style="padding-top: 35px">
         <div class="login-box">
@@ -214,5 +102,3 @@
         </script>
       </body>
 
-
-@endsection

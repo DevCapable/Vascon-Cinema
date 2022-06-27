@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('user::layouts.master')
+ @section('content')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Admin | Dashboard</title>
- @extends('user::layouts.styles')
-  <style>
-    .help-block {
-      color: #dc3545;
-    }
-
-    .has-error {
-      color: #dc3545;
-    }
-
-    summary {
-      background-color: greenyellow;
-      font-size: 15px;
-    }
-
-    summary:hover {
-      color: rgb(240, 218, 218);
-      background-color: green;
-    }
-  </style>
-</head>
-
- @extends('user::layouts.sidebar')
- 
-
-
-<body style="padding-top: 1px">
-  <!-- sidebar -->
-  @extends('user::layouts.sidebar')
-  <!-- Navbar -->
-  <!---NAVBAR HERE-->
-  @extends('user::layouts.navbar')
-  <!-- NAVBAR ENDS HERE--->
-  <!-- /.navbar -->
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -99,7 +58,7 @@
                     <th width="135px">CREATED ON</th>
                     <th width="100px">ACTION</th>
                   </tr>
-                 
+
                   @foreach($ajaBranch as $item)
                   <tr>
                     <td width="80px">{{ $item->admin }}</td>
@@ -115,12 +74,12 @@
                     <td width="80px">{{ $item->time }}</td>
                     <td width="80px">{{ $item->date }}</td>
                     <td width="100px">
-                    
+
                         <video width="320" height="240" controls>
                           <source src="{{ asset($item->movie) }}" type="video/mp4" class="img-thumbnail" style="box-shadow: 0px 2px 7px 2px gray ;" alt="VAS Solutions"
                             style="border-radius: 100px">
                     </video></td>
-                        
+
                     <td width="100px">{{ $item->created_at }}</td>
                     <td width="340px">
                       <a onclick="return confirm('Are you sure you want to delete {{$item->full_name}}?')"
@@ -168,13 +127,13 @@
                         <label for="title">SHOW TIME</label>
                         <input type="time" name="time" class="form-control">
                       </div>
-                      
+
                       <div class="col-md-6">
                         <label for="title">SHOW DATE</label>
                         <input type="date" name="date" class="form-control">
                       </div>
-                     
-                      
+
+
                       <div class="col-md-12">
                         <div class="form-group {{ $errors->has('content') ? 'has-error' : '' }}">
                           <div>
@@ -213,12 +172,15 @@
               </div>
             </div>
             <!-- /.container-fluid -->
+          </div>
+        </div>
+      </div>
     </section>
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  @extends('user::layouts.footer')
-  @extends('user::layouts.scripts')
+ @stop
   <script>
     const Toast = Swal.mixin({
       toast: true,
@@ -241,6 +203,3 @@
       $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
-</body>
-
-</html>

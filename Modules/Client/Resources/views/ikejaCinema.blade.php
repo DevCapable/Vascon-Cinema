@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>VAS Solutions.com</title>
-</head>
-
-<body data-theme="light">
-    @extends('client::layouts.app')
-    @extends('client::layouts.styles')
-    <!-- hero area -->
-
-    <!-- testimonial section start -->
+    @extends('client::layouts.master')
+    @section('content')
     <div class="position-relative bg-default-3 overflow-hidden z-index-1 pt-lg-24 pt-md-23 pt-13">
         <div class="container">
             <div class="row justify-content-center">
@@ -30,7 +20,7 @@
                             <div class="row justify-content-center">
                                 @foreach ($ikejaCinema as $item )
                                 <div class="col-xl-6 col-lg-5 col-md-6">
-                                        
+
                                     <div class="card">
                                         <div class="card-body">
                                             <video width="100%" height="400px" controls>
@@ -71,8 +61,4 @@
         <div class="bg-shape-3"></div>
     </div>
 
-   @extends('client::layouts.footer')
-    @extends('client::layouts.script')
-</body>
-
-</html>
+    @stop

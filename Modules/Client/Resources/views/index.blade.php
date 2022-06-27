@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>VAS SOLUTION</title>
-    <style>
-        .card {
-            box-shadow: 2px 6px 7px 2px red;
-            margin: 10px;
-        }
-    </style>
-</head>
-
-<body data-theme="light">
-    @extends('cinema::layouts.master')
-
-    @extends('client::layouts.app')
-    <!-- hero area -->
+  @extends('client::layouts.master')
+    @section('content')
     <div
         class="bg-default-3 pt-21 pt-sm-24 pt-md-25 pt-lg-28 pb-lg-0 pb-md-15 pb-11 position-relative z-index-1 overflow-hidden">
         <div class="container">
@@ -104,7 +88,7 @@
                                 data-aos-duration="800" data-aos-once="true">
                                 <!-- content img start -->
                                 <div class="img-pos-1 pr-5 ml-n10 pos-abs-bl h-100">
-                                   <a href="ajahCinema"><img src="img/region.jpg" alt="" class="w-100"></a> 
+                                   <a href="ajahCinema"><img src="img/region.jpg" alt="" class="w-100"></a>
                                 </div>
                                 <!-- content img end -->
                             </div>
@@ -181,7 +165,7 @@
                                     data-aos-duration="800" data-aos-once="true">
                                     <!-- content img start -->
                                     <div class="img-pos-1 pr-5 ml-n10 pos-abs-bl h-100">
-                                    <a href="{{ route('lekkiCinema') }}"><img src="img/region.jpg" alt="" class="w-100"></a> 
+                                    <a href="{{ route('lekkiCinema') }}"><img src="img/region.jpg" alt="" class="w-100"></a>
                                     </div>
                                     <!-- content img end -->
                                 </div>
@@ -230,10 +214,10 @@
                                 <!-- seg 1 lekkiCinema --->
                                 <div class="col-xl-4 col-lg-5 col-md-4">
                                     @foreach ($lekkiCinema as $item )
-                                    <div class="card">
+                                    <div class="home-card">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-12 col-lg-5 col-md-12">
-                                                
+
                                             <div class="card-body">
                                                 <video width="100%" height="150px" controls>
                                                     <source src="{{ asset($item->movie) }}" type="video/mp4" class="img-thumbnail" style="box-shadow: 0px 2px 7px 2px gray ;" alt="VAS Solutions"
@@ -265,7 +249,7 @@
                                 <!-- seg 2 Ajah Cinema--->
                                 <div class="col-xl-4 col-lg-5 col-md-4">
                                     @foreach ($ajahCinema as $cinema )
-                                    <div class="card">
+                                    <div class="home-card">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-12 col-lg-5 col-md-12">
                                             <div class="card-body">
@@ -299,7 +283,7 @@
                                 <!-- seg 3 Ikeja Cinema--->
                                 <div class="col-xl-4 col-lg-5 col-md-4">
                                     @foreach ($ikejaCinema as $ItemIkejaCinema )
-                                    <div class="card">
+                                    <div class="home-card">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-12 col-lg-5 col-md-12">
                                             <div class="card-body">
@@ -339,11 +323,6 @@
         </div>
         <div class="bg-shape-3"></div>
     </div>
-    </div>
 
-    @extends('client::layouts.footer')
-    <div  id="form-submit"></div>
-    @extends('client::layouts.script')
-</body>
+    @stop
 
-</html>
