@@ -1,4 +1,5 @@
     @extends('client::layouts.master')
+    @section('title',' Lekki cinema ')
     @section('content')
         <div class="position-relative bg-default-3 overflow-hidden z-index-1 pt-lg-24 pt-md-23 pt-13">
             <div class="container">

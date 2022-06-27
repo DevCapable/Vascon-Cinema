@@ -1,5 +1,7 @@
   @extends('client::layouts.master')
-    @section('content')
+  @section('title','Index ')
+
+  @section('content')
     <div
         class="bg-default-3 pt-21 pt-sm-24 pt-md-25 pt-lg-28 pb-lg-0 pb-md-15 pb-11 position-relative z-index-1 overflow-hidden">
         <div class="container">

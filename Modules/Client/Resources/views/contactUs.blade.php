@@ -1,5 +1,7 @@
   @extends('client::layouts.master')
-    @section('content')
+  @section('title',' Contact Us ')
+
+  @section('content')
     <div class="position-relative bg-default-3 overflow-hidden z-index-1 pt-lg-24 pt-md-23 pt-13">
         <div class="container">
             <div class="row justify-content-center">
