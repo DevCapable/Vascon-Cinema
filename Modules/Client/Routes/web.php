@@ -13,30 +13,30 @@
 
     use Nwidart\Modules\Facades\Module;
     use Illuminate\Support\Facades\Route;
-    use Modules\Client\Http\Controllers\ClientController as clintController;
+    use Modules\Client\Http\Controllers\ClientController as clientController;
 
     Route::prefix('client')->group(function () {
             Route::get('/', 'ClientController@index');
-            Route::get('lekkiCinema', [clintController::class, 'lekkiCinema'])->name('lekkiCinema');
+            Route::get('lekkiCinema', [clientController::class, 'lekkiCinema'])->name('lekkiCinema');
 
         // get ikeja publication page
-            Route::get('ikejaCinema', [clintController::class, 'ikejaCinema'])->name('ikejaCinema');
+            Route::get('ikejaCinema', [clientController::class, 'ikejaCinema'])->name('ikejaCinema');
 
         // get Ajah publication page
-            Route::get('ajahCinema', [clintController::class, 'ajahCinema'])->name('ajahCinema');
+            Route::get('ajahCinema', [clientController::class, 'ajahCinema'])->name('ajahCinema');
 
         // get contact us page
-            Route::get('contactUs', [clintController::class, 'contactUs'])->name('contactUs');
+            Route::get('contactUs', [clientController::class, 'contactUs'])->name('contactUs');
 
         // get about us page
-            Route::get('aboutUs', [clintController::class, 'aboutUs'])->name('aboutUs');
+            Route::get('aboutUs', [clientController::class, 'aboutUs'])->name('aboutUs');
 
         // read ajah Cinema
-            Route::get('read-ajahCinema/{id}', [clintController::class, 'readAjahCinema'])->name('read-ajahCinema');
+            Route::get('read-ajahCinema/{id}', [clientController::class, 'readAjahCinema'])->name('read-ajahCinema');
         // read ikeja Cinema
-            Route::get('read-ikejaCinema/{id}', [clintController::class, 'readIkejaCinema'])->name('read-ikejaCinema');
+            Route::get('read-ikejaCinema/{id}', [clientController::class, 'readIkejaCinema'])->name('read-ikejaCinema');
 
         // read lekki Cinema
-            Route::get('read-lekkiCinema/{id}', [clintController::class, 'readLekkiCinema'])->name('read-lekkiCinema');
+            Route::get('read-lekkiCinema/{id}', [clientController::class, 'readLekkiCinema'])->name('read-lekkiCinema');
 
     });

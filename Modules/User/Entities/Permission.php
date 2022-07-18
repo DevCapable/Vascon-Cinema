@@ -5,18 +5,17 @@ namespace Modules\User\Entities;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class User extends Model
+class permission extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'username',
-        'password'
+        'user_id',
+        'roles'
     ];
 
-    protected $hidden =['password','username'];
-
-    public function roles(){
-        return $this->hasMany(role::class, 'user_id');
+    protected static function newFactory()
+    {
+        return \Modules\User\Database\factories\PermissionFactory::new();
     }
 }

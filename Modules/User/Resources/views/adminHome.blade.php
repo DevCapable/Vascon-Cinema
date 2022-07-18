@@ -106,7 +106,9 @@
                         @endif
                       </div>
                       <div>
+                          @can('post.create', Auth::user())
                         <button type="submit" id="postbutton" novallidate>PUBLISH</button>
+                          @endcan
                       </div>
                     </div>
                   </form>
